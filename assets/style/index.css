@@ -1,0 +1,147 @@
+@import "./reset.css";
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: min(100%-30px, 1080);
+    margin-inline: auto;
+}
+
+/*------------------*/
+/*------header------*/
+/*------------------*/
+
+header{
+    height: 72px;
+    background-color: #e63946;
+    line-height: 72px;
+}
+
+.flexbox{
+    display: flex;
+}
+
+h1{
+    width: 40% ;
+}
+
+.page-links{
+    width: 40%;
+    text-align: right;
+    list-style: none
+}
+
+.page-links li:hover{
+    color: #457b9d;
+    transition: all .2s;
+}
+
+.page-links li + li{
+    margin-left: 30px;
+}
+
+.pfp{
+    width: 20%;
+}
+
+.pfp-btn{
+    background-image: url('../img/pfp.jpg');
+    background-size: 50px;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    margin-top: 11px;
+    margin-left: 83px;
+}
+
+
+/*------------------*/
+/*-------main-------*/
+/*------------------*/
+
+main{
+    width: 100%;
+    min-height: calc(100vh - 72px);
+    background-color: #f1faee;
+    padding: 30px;
+}
+
+textarea{
+    resize: none;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+}
+
+form{
+    background-color: #fff;
+    width: 500px;
+    height: 50px;
+    margin-left: calc(50% - 250px);
+}
+
+.post-btn{
+    width: 60px;
+    margin-left: 150px;
+    background-color: #e63946;
+}
+
+.file-upload, .post{
+    height: 30px;
+}
+.post-list{
+    width: 500px;
+    margin-top: 30px;
+    margin-left: calc( 50% - 250px);
+}
+
+.post{
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    height:fit-content;
+    background-color: #fff;
+    display: block;
+    line-height: 20px;
+}
+
+.pfp-small{
+    background-image: url(../img/pfp.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.profile-name{
+    line-height: 40px;
+    margin-left: 10px;
+    width: 180px;
+}
+
+.time{
+    line-height: 40px;
+    text-align: right;
+    margin-left: 250px;
+}
+
+p, img{
+    margin-top: 15px;
+}
+
+.modal{
+    height:fit-content;
+    width:fit-content;
+    padding: 20px;
+    position: relative;
+    right: -1000px;
+    top: -745px;
+    border-radius: 10px;
+    background-color: #fff;
+}
