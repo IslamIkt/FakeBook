@@ -26,6 +26,10 @@ class Subscriber extends User{
         this.#groups = groups;
         this.#canMonetize = canMonetize;
     }
+
+    getName(){
+        return this.name
+    }
 }
 
 const IslamIkt = new Subscriber(12342, 'Islam Iktislyamov', 'islam.ikt', 'wnefnaa@gmail.com', ['islamiktis', 'islamAdAcc'], 
@@ -38,7 +42,7 @@ const textInput = document.querySelector('.text-input');
 const fileInput = document.querySelector('.file-upload');
 const pfp = document.querySelector('.pfp-btn');
 const postTime = document.querySelector('.time');
-const body = document.querySelector('body');
+const main = document.querySelector('main');
 
 const time = new Date;
 const hour = time.getHours();
@@ -47,40 +51,44 @@ const min = time.getMinutes();
 let count = 0
 
 function openModal(){
-    if(count === 0){
+    switch(count){
+    case 0:
         const modal = document.createElement('div');
         modal.classList.add('modal');
 
         modal.innerHTML = `
-        <ul>
-            <li>
-                Nmae: ${IslamIkt.name}
-            </li>
-            <li>
-                User Name: ${IslamIkt.userName}
-            </li>
-            <li>
-                Email: ${IslamIkt.email}
-            </li>
-            <li>
-                Groups(3)
-            </li>
-            <li>
-                Pages(2)
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    Name: ${IslamIkt.getName()}
+                </li>
+                <li>
+                    User Name: ${IslamIkt.userName}
+                </li>
+                <li>
+                    Email: ${IslamIkt.email}
+                </li>
+                <li>
+                    Groups(3)
+                </li>
+                <li>
+                    Pages(2)
+                </li>
+            </ul>
         `;
 
-        body.append(modal);
-        count= count + 2;
-    }
-    else if(count === 1){
-        modal.style.display = "none";
+        main.prepend(modal);
+        count++ 
+        break;
+
+    case 1:
+        modal.style.display = 'none';
         count++;
-    }
-    else if(count === 2){
-        modal.style.display = 'block'
+        break;
+    
+    case 2:
+        modal.style.display = 'block';
         count--;
+        break;
     }
 }
 
@@ -102,7 +110,7 @@ function createTextPost(){
         </div>
     </div>
     `;
-    postList.append(post);
+    postList.prepend(post);
 }
 
 function createPicPost(){
@@ -119,7 +127,7 @@ function createPicPost(){
         </div>
     </div>
     `
-    postList.append(post);
+    postList.prepend(post);
 }
 
 function createPost(){
@@ -137,7 +145,7 @@ function createPost(){
         </div>
     </div>
     `
-    postList.append(post);
+    postList.prepend(post);
 }
 
 postBtn.addEventListener('click', () => {
