@@ -1,36 +1,6 @@
 'use strict'
 
-class User{
-    #id;
-    #name;
-    #userName; 
-    #email;
-
-    constructor(id, name, userName, email){
-        this.#id = id;
-        this.#name = name;
-        this.#userName = userName;
-        this.#email = email;
-    }
-}
-
-class Subscriber extends User{
-    #pages; 
-    #groups; 
-    #canMonetize;
-
-    constructor(id, name, userName, email, pages, groups, canMonetize){
-        super(id, name, userName, email);
-
-        this.#pages = pages;
-        this.#groups = groups;
-        this.#canMonetize = canMonetize;
-    }
-
-    getName(){
-        return this.name
-    }
-}
+import { Subscriber } from "./Subscriber.js";
 
 const IslamIkt = new Subscriber(12342, 'Islam Iktislyamov', 'islam.ikt', 'wnefnaa@gmail.com', ['islamiktis', 'islamAdAcc'], 
 ['Programing group', 'Young Artists MB', 'Free Movies'], true);
