@@ -15,7 +15,7 @@ class Subscriber extends User{
         this.#canMonetize = canMonetize;
     }
 
-    getName(){
+    get getName(){
         return this.name
     }
 }

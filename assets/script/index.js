@@ -29,7 +29,7 @@ function openModal(){
         modal.innerHTML = `
             <ul>
                 <li>
-                    Name: ${IslamIkt.getName()}
+                    Name: ${IslamIkt.getName}
                 </li>
                 <li>
                     User Name: ${IslamIkt.userName}
