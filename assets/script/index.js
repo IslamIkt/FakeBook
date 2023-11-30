@@ -111,7 +111,7 @@ function createPost(){
         </div>
         <div class='post-text'>
         <p>${textInput.value}</p>
-        <img src="${fileInput.files[0].name}" width="500"> 
+        <img src="${fileInput.files[0].name}" width="500"> </img>
         </div>
     </div>
     `
